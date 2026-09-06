@@ -36,18 +36,18 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/50 p-4"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
       aria-label={product.name}
       onClick={onClose}
     >
       <div
-        className="max-h-[90vh] w-full max-w-3xl overflow-y-auto bg-white shadow-2xl"
+        className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white shadow-[0_40px_80px_-24px_rgba(16,24,40,0.35)]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2">
-          <div className="flex items-center justify-center bg-paper-dim p-10">
+          <div className="flex items-center justify-center bg-paper-dim p-10 sm:rounded-l-3xl">
             <img src={product.image} alt={product.name} className="max-h-72 w-full object-contain" />
           </div>
 
@@ -56,7 +56,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="ml-auto -mr-2 -mt-2 flex h-9 w-9 items-center justify-center text-ink-soft hover:text-ink"
+              className="ml-auto -mr-2 -mt-2 flex h-9 w-9 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-paper-dim hover:text-ink"
             >
               ✕
             </button>
@@ -80,11 +80,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               ))}
             </dl>
 
-            <Link
-              to={`/contact?product=${product.id}`}
-              onClick={onClose}
-              className="mt-8 inline-flex items-center justify-center rounded-sm bg-brand-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-800"
-            >
+            <Link to={`/contact?product=${product.id}`} onClick={onClose} className="btn-primary mt-8">
               Contact Us About This Product
             </Link>
           </div>

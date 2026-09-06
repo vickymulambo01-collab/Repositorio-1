@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { PageIntro } from '@/components/PageIntro'
 import { ProductGrid } from '@/components/ProductGrid'
 import { ProductModal } from '@/components/ProductModal'
 import { Seo } from '@/components/Seo'
@@ -44,18 +45,11 @@ export default function Products() {
         path="/products"
       />
 
-      <section className="bg-ink py-20">
-        <div className="container-page">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">Catalogue</p>
-          <h1 className="max-w-2xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Our Products
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70">
-            Browse our range by category, or search for a specific product. Contact us for
-            detailed information or a quotation.
-          </p>
-        </div>
-      </section>
+      <PageIntro
+        eyebrow="Catalogue"
+        title="Our Products"
+        description="Browse our range by category, or search for a specific product. Contact us for detailed information or a quotation."
+      />
 
       <section className="py-16">
         <div className="container-page">
@@ -83,7 +77,7 @@ export default function Products() {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search products…"
                 aria-label="Search products"
-                className="w-full rounded-sm border border-line bg-white px-4 py-2.5 text-sm text-ink focus:border-brand-500 focus:outline-none"
+                className="w-full rounded-full border border-line bg-white px-5 py-2.5 text-sm text-ink transition-colors focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
               />
             </div>
           </div>
@@ -122,10 +116,10 @@ function CategoryPill({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+      className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
         active
-          ? 'border-brand-700 bg-brand-700 text-white'
-          : 'border-line bg-white text-ink-soft hover:border-brand-300 hover:text-brand-700'
+          ? 'border-brand-600 bg-brand-600 text-white shadow-[0_6px_16px_-8px_rgba(37,84,184,0.6)]'
+          : 'border-line bg-white text-ink-soft hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700'
       }`}
     >
       {label}

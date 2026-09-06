@@ -13,17 +13,17 @@ export function ProductCard({ product, onSelect }: ProductCardProps) {
     <button
       type="button"
       onClick={() => onSelect(product)}
-      className="group flex flex-col overflow-hidden border border-line bg-white text-left transition-shadow hover:shadow-[0_8px_30px_rgba(20,39,72,0.08)]"
+      className="card-surface card-surface-hover group flex flex-col overflow-hidden bg-white text-left"
     >
       <div className="relative aspect-square overflow-hidden bg-paper-dim">
         <img
           src={product.image}
           alt={product.name}
           loading="lazy"
-          className="h-full w-full object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-105"
         />
         {product.ply && (
-          <span className="absolute left-3 top-3 rounded-sm bg-white/90 px-2 py-1 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+          <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-ink-soft shadow-sm">
             {product.ply}
           </span>
         )}
@@ -42,9 +42,9 @@ export function ProductCard({ product, onSelect }: ProductCardProps) {
           {product.sheets && <li>{product.sheets} sheets</li>}
           {product.dimensions && <li>{product.dimensions}</li>}
         </ul>
-        <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700">
+        <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
           Request Information
-          <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+          <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
             →
           </span>
         </span>

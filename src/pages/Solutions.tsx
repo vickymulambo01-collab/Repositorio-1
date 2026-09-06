@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CTASection } from '@/components/CTASection'
+import { PageIntro } from '@/components/PageIntro'
 import { Seo } from '@/components/Seo'
 import { SectionHeader } from '@/components/SectionHeader'
 
@@ -46,20 +47,11 @@ export default function Solutions() {
         path="/solutions"
       />
 
-      <section className="bg-ink py-20">
-        <div className="container-page">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">
-            Quality &amp; Solutions
-          </p>
-          <h1 className="max-w-2xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Solutions for Professional Use
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70">
-            Our products serve a range of professional and commercial segments. Below is an
-            overview of where our range applies.
-          </p>
-        </div>
-      </section>
+      <PageIntro
+        eyebrow="Quality & Solutions"
+        title="Solutions for Professional Use"
+        description="Our products serve a range of professional and commercial segments. Below is an overview of where our range applies."
+      />
 
       <section className="py-24">
         <div className="container-page flex flex-col gap-20">
@@ -70,7 +62,7 @@ export default function Solutions() {
                 i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
               }`}
             >
-              <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-paper-dim p-10">
+              <div className="card-surface flex aspect-[4/3] items-center justify-center overflow-hidden bg-paper-dim p-10">
                 <img
                   src={segment.image}
                   alt={segment.title}
@@ -79,7 +71,7 @@ export default function Solutions() {
                 />
               </div>
               <div>
-                <span className="text-xs font-semibold text-brand-600">
+                <span className="font-display text-2xl font-bold text-brand-200">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <h2 className="mt-2 font-display text-2xl font-bold text-ink sm:text-3xl">
@@ -88,7 +80,7 @@ export default function Solutions() {
                 <p className="mt-4 text-base leading-relaxed text-ink-soft">{segment.description}</p>
                 <Link
                   to={`/products?category=${segment.categories[0]}`}
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 hover:text-brand-800"
+                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
                 >
                   View related products
                   <span aria-hidden="true">→</span>

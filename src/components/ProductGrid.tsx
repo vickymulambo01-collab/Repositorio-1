@@ -9,7 +9,7 @@ interface ProductGridProps {
 export function ProductGrid({ products, onSelect }: ProductGridProps) {
   if (products.length === 0) {
     return (
-      <div className="border border-dashed border-line py-20 text-center">
+      <div className="rounded-2xl border border-dashed border-line bg-paper-dim/60 py-20 text-center">
         <p className="text-base font-medium text-ink">No products match your search.</p>
         <p className="mt-1 text-sm text-ink-soft">Try a different keyword or category.</p>
       </div>

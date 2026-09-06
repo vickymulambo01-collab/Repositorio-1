@@ -1,4 +1,5 @@
 import { CTASection } from '@/components/CTASection'
+import { PageIntro } from '@/components/PageIntro'
 import { Seo } from '@/components/Seo'
 import { SectionHeader } from '@/components/SectionHeader'
 
@@ -40,16 +41,7 @@ export default function About() {
         path="/about"
       />
 
-      <section className="bg-ink py-20">
-        <div className="container-page">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-200">
-            About RIM
-          </p>
-          <h1 className="max-w-2xl font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            RIM Trading &amp; Indústria, Lda
-          </h1>
-        </div>
-      </section>
+      <PageIntro eyebrow="About RIM" title="RIM Trading & Indústria, Lda" />
 
       <section className="py-24">
         <div className="container-page grid grid-cols-1 gap-16 lg:grid-cols-2">
@@ -63,16 +55,16 @@ export default function About() {
           </div>
 
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-ink-soft">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">
               Areas of Activity
             </h3>
             <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {ACTIVITY_AREAS.map((area) => (
                 <li
                   key={area}
-                  className="flex items-start gap-2.5 border border-line bg-white px-4 py-3 text-sm text-ink"
+                  className="flex items-start gap-2.5 rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink"
                 >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
                   {area}
                 </li>
               ))}
@@ -88,11 +80,13 @@ export default function About() {
             title="How We Work"
             description="Our approach to the business is centred on four principles."
           />
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {APPROACH.map((item, i) => (
-              <div key={item.title} className="border-t-2 border-brand-600 pt-5">
-                <span className="text-xs font-semibold text-brand-600">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="mt-2 font-display text-lg font-semibold text-ink">{item.title}</h3>
+              <div key={item.title} className="card-surface card-surface-hover bg-white p-7">
+                <span className="font-display text-2xl font-bold text-brand-200">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="mt-3 font-display text-lg font-semibold text-ink">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.description}</p>
               </div>
             ))}
