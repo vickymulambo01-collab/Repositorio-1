@@ -1,0 +1,44 @@
+[
+  {
+    "id": "napkins",
+    "name": "Napkins",
+    "shortDescription": "Table and everyday napkins in a range of ply, sizes and pack formats.",
+    "image": "/assets/products/nice-guardanapos.png"
+  },
+  {
+    "id": "take-away",
+    "name": "Take Away",
+    "shortDescription": "Napkins and paper products for take-away and food-service operations.",
+    "image": "/assets/products/serviette-takeaway-2ply.jpeg"
+  },
+  {
+    "id": "facial-tissue",
+    "name": "Facial Tissue",
+    "shortDescription": "Soft 2-ply facial tissue in multiple sheet counts.",
+    "image": "/assets/products/facial-nice-150.png"
+  },
+  {
+    "id": "toilet-paper",
+    "name": "Toilet Paper",
+    "shortDescription": "A full toilet paper range from jumbo rolls to premium multi-ply.",
+    "image": "/assets/products/papel-higienico-nice-8.png"
+  },
+  {
+    "id": "kitchen-towels",
+    "name": "Kitchen Towels",
+    "shortDescription": "Absorbent 2-ply kitchen towel rolls for home and professional kitchens.",
+    "image": "/assets/products/toalha-cozinha-nice.jpeg"
+  },
+  {
+    "id": "office-paper",
+    "name": "Office Paper",
+    "shortDescription": "A4 copier paper for offices and corporate environments.",
+    "image": "/assets/products/papel-a4.jpeg"
+  },
+  {
+    "id": "industrial-cleaning",
+    "name": "Industrial & Cleaning",
+    "shortDescription": "Cleaning equipment for professional and industrial environments.",
+    "image": "/assets/products/vassoura-industrial-superpro.jpeg"
+  }
+]
