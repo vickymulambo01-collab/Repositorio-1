@@ -11,7 +11,7 @@ const SEGMENTS = [
     description:
       'Products for hotels, restaurants, cafés and other hospitality spaces, including napkins, facial tissue and toilet paper suited to daily guest-facing use.',
     categories: ['napkins', 'facial-tissue', 'toilet-paper'],
-    image: '/assets/products/nice-classic-100.png',
+    image: '/assets/products/nice-classic-100.jpg',
   },
   {
     id: 'food-service',
@@ -19,7 +19,7 @@ const SEGMENTS = [
     description:
       'Napkin and paper products for take-away and food-service operations, including our dedicated Serviette Take Away range.',
     categories: ['take-away', 'napkins'],
-    image: '/assets/products/serviette-takeaway-2ply.jpeg',
+    image: '/assets/products/serviette-takeaway-2ply.jpg',
   },
   {
     id: 'commercial',
@@ -27,14 +27,14 @@ const SEGMENTS = [
     description:
       'Tissue, toilet paper and A4 office paper for businesses and corporate environments.',
     categories: ['facial-tissue', 'toilet-paper', 'office-paper'],
-    image: '/assets/products/papel-a4.jpeg',
+    image: '/assets/products/papel-a4.jpg',
   },
   {
     id: 'industrial',
     title: 'Industrial & Cleaning',
     description: 'Products for professional and industrial cleaning environments.',
     categories: ['industrial-cleaning'],
-    image: '/assets/products/vassoura-industrial-superpro.jpeg',
+    image: '/assets/products/vassoura-industrial-superpro.jpg',
   },
 ]
 

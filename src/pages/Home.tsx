@@ -19,7 +19,7 @@ const HOMEPAGE_CATEGORIES = [
     id: 'office-industrial',
     name: 'Office & Industrial',
     shortDescription: 'A4 office paper and equipment for industrial and cleaning use.',
-    image: '/assets/products/papel-a4.jpeg',
+    image: '/assets/products/papel-a4.jpg',
   },
 ]
 

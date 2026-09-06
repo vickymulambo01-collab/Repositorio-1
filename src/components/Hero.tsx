@@ -37,21 +37,21 @@ export function Hero() {
         <div className="relative mx-auto h-[22rem] w-full max-w-md sm:h-[26rem]">
           <div className="card-surface absolute right-0 top-0 flex h-56 w-52 rotate-3 items-center justify-center overflow-hidden p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.22)] sm:h-64 sm:w-60">
             <img
-              src="/assets/products/nice-classic-100.png"
+              src="/assets/products/nice-classic-100.jpg"
               alt="Nice Classic napkins"
               className="h-full w-full object-contain"
             />
           </div>
           <div className="card-surface absolute bottom-0 left-0 flex h-52 w-48 -rotate-6 items-center justify-center overflow-hidden bg-tint p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.18)] sm:h-60 sm:w-56">
             <img
-              src="/assets/products/facial-nice-150.png"
+              src="/assets/products/facial-nice-150.jpg"
               alt="Facial Nice tissue"
               className="h-full w-full object-contain"
             />
           </div>
           <div className="card-surface absolute bottom-8 right-4 flex h-28 w-28 items-center justify-center overflow-hidden shadow-[0_20px_40px_-20px_rgba(16,24,40,0.2)] sm:h-32 sm:w-32">
             <img
-              src="/assets/products/toalha-cozinha-nice.jpeg"
+              src="/assets/products/toalha-cozinha-nice.jpg"
               alt="Nice kitchen towel"
               className="h-full w-full object-cover"
             />
