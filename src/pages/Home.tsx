@@ -80,17 +80,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-paper-dim py-24">
+      <section className="bg-brand-900 py-24">
         <div className="container-page">
-          <SectionHeader eyebrow="Why RIM" title="Built for Professional Supply Needs" />
+          <SectionHeader eyebrow="Why RIM" title="Built for Professional Supply Needs" invert />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((pillar) => (
-              <div key={pillar.title} className="card-surface card-surface-hover bg-white p-7">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-tint text-brand-600">
+              <div
+                key={pillar.title}
+                className="rounded-2xl border border-white/10 bg-brand-800 p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20"
+              >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-brand-200">
                   <pillar.icon className="h-5 w-5" strokeWidth={1.75} />
                 </div>
-                <h3 className="mt-5 font-display text-lg font-semibold text-ink">{pillar.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{pillar.description}</p>
+                <h3 className="mt-5 font-display text-lg font-semibold text-white">{pillar.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/70">{pillar.description}</p>
               </div>
             ))}
           </div>

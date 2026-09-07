@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { categories, products } from '@/data/products'
 
 export function Hero() {
   return (
@@ -32,24 +33,44 @@ export function Hero() {
               Contact Us
             </Link>
           </div>
+
+          <div className="mt-12 flex items-center gap-8 border-t border-line pt-8">
+            <div>
+              <p className="font-display text-3xl font-bold text-ink">{products.length}</p>
+              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-ink-soft">
+                Products in catalogue
+              </p>
+            </div>
+            <div className="h-10 w-px bg-line" aria-hidden="true" />
+            <div>
+              <p className="font-display text-3xl font-bold text-ink">{categories.length}</p>
+              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-ink-soft">
+                Product categories
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="relative mx-auto h-[22rem] w-full max-w-md sm:h-[26rem]">
-          <div className="card-surface absolute right-0 top-0 flex h-56 w-52 rotate-3 items-center justify-center overflow-hidden p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.22)] sm:h-64 sm:w-60">
+        <div className="relative mx-auto h-[24rem] w-full max-w-lg sm:h-[29rem]">
+          <div
+            aria-hidden="true"
+            className="absolute inset-6 rounded-[2.5rem] bg-brand-900 sm:inset-10"
+          />
+          <div className="card-surface absolute right-0 top-2 flex h-56 w-52 rotate-3 items-center justify-center overflow-hidden bg-white p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.35)] sm:h-64 sm:w-60">
             <img
               src="/assets/products/nice-classic-100.jpg"
               alt="Nice Classic napkins"
               className="h-full w-full object-contain"
             />
           </div>
-          <div className="card-surface absolute bottom-0 left-0 flex h-52 w-48 -rotate-6 items-center justify-center overflow-hidden bg-tint p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.18)] sm:h-60 sm:w-56">
+          <div className="card-surface absolute bottom-2 left-0 flex h-52 w-48 -rotate-6 items-center justify-center overflow-hidden bg-tint p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.3)] sm:h-60 sm:w-56">
             <img
               src="/assets/products/facial-nice-150.jpg"
               alt="Facial Nice tissue"
               className="h-full w-full object-contain"
             />
           </div>
-          <div className="card-surface absolute bottom-8 right-4 flex h-28 w-28 items-center justify-center overflow-hidden shadow-[0_20px_40px_-20px_rgba(16,24,40,0.2)] sm:h-32 sm:w-32">
+          <div className="card-surface absolute bottom-16 right-6 flex h-28 w-28 items-center justify-center overflow-hidden bg-white shadow-[0_20px_40px_-20px_rgba(16,24,40,0.3)] sm:h-32 sm:w-32">
             <img
               src="/assets/products/toalha-cozinha-nice.jpg"
               alt="Nice kitchen towel"
