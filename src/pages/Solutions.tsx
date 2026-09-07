@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { CTASection } from '@/components/CTASection'
 import { PageIntro } from '@/components/PageIntro'
@@ -83,7 +84,7 @@ export default function Solutions() {
                   className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
                 >
                   View related products
-                  <span aria-hidden="true">→</span>
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

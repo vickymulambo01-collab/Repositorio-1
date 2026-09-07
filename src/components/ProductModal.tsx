@@ -1,3 +1,4 @@
+import { X } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import type { Product } from '@/types'
@@ -58,7 +59,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               aria-label="Close"
               className="ml-auto -mr-2 -mt-2 flex h-9 w-9 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-paper-dim hover:text-ink"
             >
-              ✕
+              <X className="h-5 w-5" />
             </button>
 
             {category && (

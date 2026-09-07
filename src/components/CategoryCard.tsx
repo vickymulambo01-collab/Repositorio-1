@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Category } from '@/types'
 
@@ -20,9 +21,7 @@ export function CategoryCard({ category }: { category: Category }) {
         <p className="text-sm leading-relaxed text-ink-soft">{category.shortDescription}</p>
         <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
           View products
-          <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
-            →
-          </span>
+          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
         </span>
       </div>
     </Link>

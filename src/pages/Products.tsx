@@ -1,3 +1,4 @@
+import { Search } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { PageIntro } from '@/components/PageIntro'
@@ -71,13 +72,14 @@ export default function Products() {
             </div>
 
             <div className="relative w-full max-w-xs">
+              <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft" />
               <input
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search products…"
                 aria-label="Search products"
-                className="w-full rounded-full border border-line bg-white px-5 py-2.5 text-sm text-ink transition-colors focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
+                className="w-full rounded-full border border-line bg-white py-2.5 pl-11 pr-4 text-sm text-ink transition-colors focus:border-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
               />
             </div>
           </div>

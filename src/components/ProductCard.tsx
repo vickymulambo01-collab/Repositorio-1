@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import type { Product } from '@/types'
 import { getCategoryById } from '@/data/products'
 
@@ -44,9 +45,7 @@ export function ProductCard({ product, onSelect }: ProductCardProps) {
         </ul>
         <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
           Request Information
-          <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
-            →
-          </span>
+          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
         </span>
       </div>
     </button>
