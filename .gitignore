@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local environment variables (SMTP credentials, ADMIN_KEY, etc.)
+.env
+.env.*
+!.env.example
+
 # Runtime enquiry storage (contains submitted contact data)
 server/data/enquiries.json
 

@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { addEnquiry } from '../data/enquiries'
+import { notifyNewEnquiry } from '../lib/mailer'
 
 export const contactRouter = Router()
 
@@ -48,4 +49,8 @@ contactRouter.post('/', (req, res) => {
   })
 
   res.status(201).json({ id: enquiry.id, receivedAt: enquiry.receivedAt })
+
+  // Fire-and-forget: the enquiry is already saved above, so a slow or failed
+  // send must not delay or fail the response to the visitor.
+  void notifyNewEnquiry(enquiry)
 })
