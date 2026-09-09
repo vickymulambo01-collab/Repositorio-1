@@ -38,6 +38,29 @@ export default function Contact() {
                 message — we will send it over.
               </p>
             </div>
+
+            <div className="mt-6 rounded-2xl border border-line bg-white p-6">
+              <h3 className="font-display text-base font-semibold text-ink">Our Details</h3>
+              <address className="mt-3 not-italic">
+                <a
+                  href="https://maps.app.goo.gl/bNCFGNA3Wn/mX47?g_st=aw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-ink-soft transition-colors hover:text-brand-600"
+                >
+                  Av. Eduardo Mondlane no 488
+                </a>
+              </address>
+              <p className="mt-2 text-sm text-ink-soft">
+                <a href="tel:+258847776666" className="transition-colors hover:text-brand-600">
+                  84 777 6666
+                </a>
+                <span className="mx-2 text-line">|</span>
+                <a href="tel:+258843466666" className="transition-colors hover:text-brand-600">
+                  84 346 6666
+                </a>
+              </p>
+            </div>
           </div>
 
           <ContactForm

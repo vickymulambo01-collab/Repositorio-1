@@ -52,6 +52,9 @@ export default function About() {
               paper and tissue, supplying items designed for professional use, restaurant and
               take-away operations, office environments and industrial cleaning.
             </p>
+            <p className="mt-4 text-sm text-ink-soft">
+              RIM Trading &amp; Indústria has been operating since 1997.
+            </p>
           </div>
 
           <div>

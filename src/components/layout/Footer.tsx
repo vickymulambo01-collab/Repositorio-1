@@ -21,6 +21,25 @@ export function Footer() {
             Paper and hygiene products for hospitality, food service, corporate and industrial
             clients.
           </p>
+          <address className="mt-5 not-italic">
+            <a
+              href="https://maps.app.goo.gl/bNCFGNA3Wn/mX47?g_st=aw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/50 transition-colors hover:text-white"
+            >
+              Av. Eduardo Mondlane no 488
+            </a>
+          </address>
+          <p className="mt-2 text-sm text-white/50">
+            <a href="tel:+258847776666" className="transition-colors hover:text-white">
+              84 777 6666
+            </a>
+            <span className="mx-2 text-white/30">|</span>
+            <a href="tel:+258843466666" className="transition-colors hover:text-white">
+              84 346 6666
+            </a>
+          </p>
         </div>
 
         <div>
