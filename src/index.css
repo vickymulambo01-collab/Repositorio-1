@@ -45,24 +45,24 @@ body {
 }
 
 .container-page {
-  max-width: 84rem;
+  max-width: 80rem;
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1.25rem;
 }
 
 @media (min-width: 1024px) {
   .container-page {
-    padding-inline: 2.5rem;
+    padding-inline: 2rem;
   }
 }
 
 /* Buttons — premium, pill-shaped, clear primary/secondary hierarchy */
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-600 px-7 py-3.5 text-sm font-semibold text-white shadow-[0_1px_2px_rgba(16,24,40,0.06),0_10px_24px_-10px_rgba(37,84,184,0.55)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_14px_28px_-10px_rgba(37,84,184,0.6)] active:translate-y-0 active:shadow-[0_4px_10px_-4px_rgba(37,84,184,0.5)];
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_1px_2px_rgba(16,24,40,0.06),0_10px_24px_-10px_rgba(37,84,184,0.55)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-brand-700 hover:shadow-[0_14px_28px_-10px_rgba(37,84,184,0.6)] active:translate-y-0 active:shadow-[0_4px_10px_-4px_rgba(37,84,184,0.5)];
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-line bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700 hover:shadow-[0_10px_20px_-12px_rgba(16,24,40,0.25)] active:translate-y-0;
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700 hover:shadow-[0_10px_20px_-12px_rgba(16,24,40,0.25)] active:translate-y-0;
 }
 
 .btn-primary-sm {
@@ -78,15 +78,15 @@ body {
 }
 
 .card-surface {
-  @apply rounded-2xl border border-line transition-all duration-300 ease-out;
+  @apply rounded-[1.25rem] border border-line bg-white shadow-[0_6px_18px_-14px_rgba(16,24,40,0.35)] transition-all duration-300 ease-out;
 }
 
 .card-surface-hover {
-  @apply hover:-translate-y-1 hover:border-brand-100 hover:shadow-[0_24px_48px_-24px_rgba(16,24,40,0.18)];
+  @apply hover:-translate-y-1 hover:shadow-[0_18px_32px_-18px_rgba(16,24,40,0.35)];
 }
 
 .eyebrow {
-  @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-brand-600;
+  @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-600;
 }
 
 h1, h2 {

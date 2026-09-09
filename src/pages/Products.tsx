@@ -52,9 +52,9 @@ export default function Products() {
         description="Browse our range by category, or search for a specific product. Contact us for detailed information or a quotation."
       />
 
-      <section className="py-16">
+      <section className="py-12">
         <div className="container-page">
-          <div className="flex flex-col gap-6 border-b border-line pb-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-wrap gap-2">
               <CategoryPill
                 label="All Products"
@@ -118,10 +118,10 @@ function CategoryPill({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
+      className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
         active
-          ? 'border-brand-600 bg-brand-600 text-white shadow-[0_6px_16px_-8px_rgba(37,84,184,0.6)]'
-          : 'border-line bg-white text-ink-soft hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700'
+          ? 'border-brand-600 bg-brand-600 text-white'
+          : 'border-line bg-white text-ink-soft hover:text-ink'
       }`}
     >
       {label}

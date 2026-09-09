@@ -43,54 +43,50 @@ export default function About() {
 
       <PageIntro eyebrow="About RIM" title="RIM Trading & Indústria, Lda" />
 
-      <section className="py-24">
-        <div className="container-page grid grid-cols-1 gap-16 lg:grid-cols-2">
-          <div>
-            <SectionHeader eyebrow="What We Do" title="Our Activity" />
-            <p className="mt-6 text-base leading-relaxed text-ink-soft">
-              RIM Trading &amp; Indústria, Lda works across a range of products related to hygiene,
-              paper and tissue, supplying items designed for professional use, restaurant and
-              take-away operations, office environments and industrial cleaning.
-            </p>
-            <p className="mt-4 text-sm text-ink-soft">
-              RIM Trading &amp; Indústria has been operating since 1997.
-            </p>
-          </div>
+      <section className="container-page grid grid-cols-1 gap-12 py-20 lg:grid-cols-2">
+        <div>
+          <SectionHeader eyebrow="What We Do" title="Our Activity" />
+          <p className="mt-6 text-base text-ink-soft">
+            RIM Trading &amp; Indústria, Lda works across a range of products related to hygiene,
+            paper and tissue, supplying items designed for professional use, restaurant and
+            take-away operations, office environments and industrial cleaning.
+          </p>
+          <p className="mt-4 text-sm text-ink-soft">
+            RIM Trading &amp; Indústria has been operating since 1997.
+          </p>
+        </div>
 
-          <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-soft">
-              Areas of Activity
-            </h3>
-            <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              {ACTIVITY_AREAS.map((area) => (
-                <li
-                  key={area}
-                  className="flex items-start gap-2.5 rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink"
-                >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
-                  {area}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div>
+          <h3 className="font-display text-lg font-bold text-ink">Areas of Activity</h3>
+          <ul className="mt-5 space-y-3">
+            {ACTIVITY_AREAS.map((area) => (
+              <li
+                key={area}
+                className="flex items-center gap-3 rounded-xl border border-line bg-white px-5 py-3.5 text-sm text-ink"
+              >
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+                {area}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <section className="bg-paper-dim py-24">
-        <div className="container-page">
+      <section className="bg-paper-dim">
+        <div className="container-page py-20">
           <SectionHeader
             eyebrow="Our Approach"
             title="How We Work"
             description="Our approach to the business is centred on four principles."
           />
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {APPROACH.map((item, i) => (
-              <div key={item.title} className="card-surface card-surface-hover bg-white p-7">
-                <span className="font-display text-2xl font-bold text-brand-200">
+              <div key={item.title} className="card-surface p-6">
+                <span className="font-display text-3xl font-extrabold text-brand-100">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="mt-3 font-display text-lg font-semibold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{item.description}</p>
+                <h3 className="mt-4 font-display text-base font-bold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm text-ink-soft">{item.description}</p>
               </div>
             ))}
           </div>

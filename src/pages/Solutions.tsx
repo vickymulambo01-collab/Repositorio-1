@@ -54,46 +54,42 @@ export default function Solutions() {
         description="Our products serve a range of professional and commercial segments. Below is an overview of where our range applies."
       />
 
-      <section className="py-24">
-        <div className="container-page flex flex-col gap-20">
-          {SEGMENTS.map((segment, i) => (
-            <div
-              key={segment.id}
-              className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
-                i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
-              }`}
-            >
-              <div className="card-surface flex aspect-[4/3] items-center justify-center overflow-hidden bg-paper-dim p-10">
-                <img
-                  src={segment.image}
-                  alt={segment.title}
-                  loading="lazy"
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-              <div>
-                <span className="font-display text-2xl font-bold text-brand-200">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <h2 className="mt-2 font-display text-2xl font-bold text-ink sm:text-3xl">
-                  {segment.title}
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-ink-soft">{segment.description}</p>
-                <Link
-                  to={`/products?category=${segment.categories[0]}`}
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
-                >
-                  View related products
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
+      <section className="container-page space-y-20 py-20">
+        {SEGMENTS.map((segment, i) => (
+          <div
+            key={segment.id}
+            className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 ${
+              i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
+            }`}
+          >
+            <img
+              src={segment.image}
+              alt={segment.title}
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-2xl border border-line bg-paper-dim object-cover"
+            />
+            <div>
+              <span className="font-display text-3xl font-extrabold text-brand-100">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h2 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink lg:text-3xl">
+                {segment.title}
+              </h2>
+              <p className="mt-4 text-ink-soft">{segment.description}</p>
+              <Link
+                to={`/products?category=${segment.categories[0]}`}
+                className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand-600"
+              >
+                View related products
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
 
-      <section className="bg-paper-dim py-24">
-        <div className="container-page">
+      <section className="bg-paper-dim">
+        <div className="container-page py-20">
           <SectionHeader
             eyebrow="Our Commitment"
             title="Quality You Can Rely On"

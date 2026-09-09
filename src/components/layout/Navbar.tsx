@@ -32,13 +32,13 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-shadow duration-300 ${
+      className={`sticky top-0 z-50 bg-white/80 backdrop-blur-md transition-shadow duration-300 ${
         scrolled ? 'shadow-[0_1px_0_rgba(16,24,40,0.06),0_8px_24px_-20px_rgba(16,24,40,0.25)]' : ''
       }`}
     >
-      <div className="container-page flex h-20 items-center justify-between">
+      <div className="container-page flex h-18 items-center justify-between">
         <NavLink to="/" className="flex items-center gap-3" aria-label="RIM Trading & Indústria home">
-          <img src="/logo-rim.png" alt="RIM Trading & Indústria" className="h-8 w-auto" />
+          <img src="/logo-rim.png" alt="RIM Trading & Indústria" className="h-10 w-auto" />
           <span className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-base font-bold tracking-tight text-ink">RIM</span>
             <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-ink-soft">
@@ -47,7 +47,7 @@ export function Navbar() {
           </span>
         </NavLink>
 
-        <nav className="hidden items-center gap-10 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
           {NAV_LINKS.map((link) => (
             <NavLink key={link.to} to={link.to} end={link.to === '/'} className={linkClass}>
               {({ isActive }) => (
@@ -61,7 +61,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <NavLink to="/contact" className="btn-primary-sm">
+          <NavLink to="/contact" className="btn-primary">
             Get in Touch
           </NavLink>
         </div>

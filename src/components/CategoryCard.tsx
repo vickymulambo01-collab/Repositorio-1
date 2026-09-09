@@ -6,22 +6,20 @@ export function CategoryCard({ category }: { category: Category }) {
   return (
     <Link
       to={`/products?category=${category.id}`}
-      className="card-surface card-surface-hover group flex flex-col overflow-hidden bg-white"
+      className="card-surface overflow-hidden"
     >
-      <div className="aspect-[4/3] overflow-hidden bg-paper-dim">
-        <img
-          src={category.image}
-          alt={category.name}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-        />
-      </div>
-      <div className="flex flex-1 flex-col gap-2 p-6">
-        <h3 className="font-display text-lg font-semibold text-ink">{category.name}</h3>
-        <p className="text-sm leading-relaxed text-ink-soft">{category.shortDescription}</p>
-        <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
+      <img
+        src={category.image}
+        alt={category.name}
+        loading="lazy"
+        className="h-48 w-full bg-paper-dim object-cover"
+      />
+      <div className="p-6">
+        <h3 className="font-display text-lg font-bold text-ink">{category.name}</h3>
+        <p className="mt-2 text-sm text-ink-soft">{category.shortDescription}</p>
+        <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">
           View products
-          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+          <ArrowRight className="h-4 w-4" />
         </span>
       </div>
     </Link>

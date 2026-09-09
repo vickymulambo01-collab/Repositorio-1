@@ -1,82 +1,56 @@
+import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { categories, products } from '@/data/products'
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-paper">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 -top-40 h-[36rem] w-[36rem] rounded-full bg-brand-100/70 blur-3xl"
+        className="pointer-events-none absolute -right-20 top-0 h-96 w-96 rounded-full bg-brand-100 opacity-60 blur-3xl"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-32 bottom-0 h-72 w-72 rounded-full bg-tint blur-3xl"
+        className="pointer-events-none absolute left-1/3 top-40 h-72 w-72 rounded-full bg-tint opacity-80 blur-3xl"
       />
 
-      <div className="container-page relative grid grid-cols-1 items-center gap-16 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
-        <div>
+      <div className="container-page relative grid items-center gap-14 py-20 lg:grid-cols-2 lg:py-28">
+        <div className="relative">
           <p className="eyebrow">RIM Trading &amp; Indústria, Lda</p>
-          <h1 className="mt-5 max-w-xl font-display text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-ink lg:text-6xl">
             Quality Paper &amp; Hygiene Solutions
           </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-ink-soft sm:text-lg">
+          <p className="mt-6 max-w-xl text-base text-ink-soft lg:text-lg">
             RIM Trading &amp; Indústria supplies napkins, tissue, toilet paper, kitchen towels,
             take-away and office paper products for hospitality, food service, corporate and
             industrial clients.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-9 flex flex-wrap gap-3">
             <Link to="/products" className="btn-primary">
-              Explore Our Products
+              Explore Our Products <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/contact" className="btn-secondary">
               Contact Us
             </Link>
           </div>
-
-          <div className="mt-12 flex items-center gap-8 border-t border-line pt-8">
-            <div>
-              <p className="font-display text-3xl font-bold text-ink">{products.length}</p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-ink-soft">
-                Products in catalogue
-              </p>
-            </div>
-            <div className="h-10 w-px bg-line" aria-hidden="true" />
-            <div>
-              <p className="font-display text-3xl font-bold text-ink">{categories.length}</p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-ink-soft">
-                Product categories
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="relative mx-auto h-[24rem] w-full max-w-lg sm:h-[29rem]">
-          <div
-            aria-hidden="true"
-            className="absolute inset-6 rounded-[2.5rem] bg-brand-900 sm:inset-10"
+        <div className="relative h-[420px]">
+          <img
+            src="/assets/products/nice-classic-100.jpg"
+            alt="Nice Classic napkins"
+            className="absolute left-0 top-6 h-56 w-56 -rotate-6 rounded-2xl border border-line object-cover shadow-2xl lg:h-64 lg:w-64"
           />
-          <div className="card-surface absolute right-0 top-2 flex h-56 w-52 rotate-3 items-center justify-center overflow-hidden bg-white p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.35)] sm:h-64 sm:w-60">
-            <img
-              src="/assets/products/nice-classic-100.jpg"
-              alt="Nice Classic napkins"
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <div className="card-surface absolute bottom-2 left-0 flex h-52 w-48 -rotate-6 items-center justify-center overflow-hidden bg-tint p-6 shadow-[0_30px_60px_-24px_rgba(16,24,40,0.3)] sm:h-60 sm:w-56">
-            <img
-              src="/assets/products/facial-nice-150.jpg"
-              alt="Facial Nice tissue"
-              className="h-full w-full object-contain"
-            />
-          </div>
-          <div className="card-surface absolute bottom-16 right-6 flex h-28 w-28 items-center justify-center overflow-hidden bg-white shadow-[0_20px_40px_-20px_rgba(16,24,40,0.3)] sm:h-32 sm:w-32">
-            <img
-              src="/assets/products/toalha-cozinha-nice.jpg"
-              alt="Nice kitchen towel"
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <img
+            src="/assets/products/facial-nice-150.jpg"
+            alt="Facial Nice tissue"
+            className="absolute right-4 top-0 h-52 w-52 rotate-3 rounded-2xl border border-line object-cover shadow-2xl lg:h-60 lg:w-60"
+          />
+          <img
+            src="/assets/products/toalha-cozinha-nice.jpg"
+            alt="Nice kitchen towel"
+            className="absolute bottom-0 right-16 h-56 w-56 -rotate-3 rounded-2xl border border-line object-cover shadow-2xl lg:h-64 lg:w-64"
+          />
         </div>
       </div>
     </section>

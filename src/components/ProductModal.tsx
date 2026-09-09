@@ -37,46 +37,50 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 p-4"
       role="dialog"
       aria-modal="true"
       aria-label={product.name}
       onClick={onClose}
     >
       <div
-        className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white shadow-[0_40px_80px_-24px_rgba(16,24,40,0.35)]"
+        className="relative max-h-[90vh] w-full max-w-3xl overflow-auto rounded-2xl border border-line bg-white p-6 shadow-2xl lg:p-8"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2">
-          <div className="flex items-center justify-center bg-paper-dim p-10 sm:rounded-l-3xl">
-            <img src={product.image} alt={product.name} className="max-h-72 w-full object-contain" />
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute right-5 top-5 text-ink-soft hover:text-ink"
+        >
+          <X className="h-5 w-5" />
+        </button>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="rounded-2xl bg-paper-dim p-6">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="mx-auto aspect-square w-full object-contain"
+            />
           </div>
 
-          <div className="flex flex-col p-8">
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label="Close"
-              className="ml-auto -mr-2 -mt-2 flex h-9 w-9 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-paper-dim hover:text-ink"
-            >
-              <X className="h-5 w-5" />
-            </button>
-
+          <div>
             {category && (
-              <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-600">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-brand-600">
                 {category.name}
-              </span>
+              </p>
             )}
-            <h2 className="mt-1 font-display text-2xl font-bold text-ink">{product.name}</h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">{product.description}</p>
+            <h2 className="mt-1 font-display text-2xl font-extrabold tracking-tight text-ink">
+              {product.name}
+            </h2>
+            <p className="mt-4 text-sm text-ink-soft">{product.description}</p>
 
-            <dl className="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-line pt-5">
+            <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
               {specs.map(([label, value]) => (
                 <div key={label}>
-                  <dt className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft/70">
-                    {label}
-                  </dt>
-                  <dd className="mt-0.5 text-sm font-medium text-ink">{value}</dd>
+                  <dt className="text-xs uppercase tracking-wider text-ink-soft">{label}</dt>
+                  <dd className="mt-0.5 font-medium text-ink">{value}</dd>
                 </div>
               ))}
             </dl>

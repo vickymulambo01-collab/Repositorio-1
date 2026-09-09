@@ -65,53 +65,44 @@ export default function Home() {
 
       <Hero />
 
-      <section className="py-24">
-        <div className="container-page">
-          <SectionHeader
-            eyebrow="Our Range"
-            title="Product Categories"
-            description="Explore our range of paper and hygiene products, organised by category."
-          />
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {HOMEPAGE_CATEGORIES.map((category) => (
-              <CategoryCard key={category.id} category={category} />
-            ))}
-          </div>
+      <section className="container-page py-20">
+        <SectionHeader
+          eyebrow="Our Range"
+          title="Product Categories"
+          description="Explore our range of paper and hygiene products, organised by category."
+        />
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {HOMEPAGE_CATEGORIES.map((category) => (
+            <CategoryCard key={category.id} category={category} />
+          ))}
         </div>
       </section>
 
-      <section className="bg-brand-900 py-24">
-        <div className="container-page">
-          <SectionHeader eyebrow="Why RIM" title="Built for Professional Supply Needs" invert />
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="bg-paper-dim">
+        <div className="container-page py-20">
+          <SectionHeader eyebrow="Why RIM" title="Built for Professional Supply Needs" />
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="rounded-2xl border border-white/10 bg-brand-800 p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-brand-200">
-                  <pillar.icon className="h-5 w-5" strokeWidth={1.75} />
+              <div key={pillar.title} className="card-surface p-6">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-tint">
+                  <pillar.icon className="h-5 w-5 text-brand-600" />
                 </div>
-                <h3 className="mt-5 font-display text-lg font-semibold text-white">{pillar.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{pillar.description}</p>
+                <h3 className="mt-5 font-display text-base font-bold text-ink">{pillar.title}</h3>
+                <p className="mt-2 text-sm text-ink-soft">{pillar.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="container-page">
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeader
-              eyebrow="Featured"
-              title="Featured Products"
-              description="A selection of products from our catalogue."
-            />
-          </div>
-          <div className="mt-12">
-            <ProductGrid products={featuredProducts} onSelect={setSelectedProduct} />
-          </div>
+      <section className="container-page py-20">
+        <SectionHeader
+          eyebrow="Featured"
+          title="Featured Products"
+          description="A selection of products from our catalogue."
+        />
+        <div className="mt-10">
+          <ProductGrid products={featuredProducts} onSelect={setSelectedProduct} />
         </div>
       </section>
 
