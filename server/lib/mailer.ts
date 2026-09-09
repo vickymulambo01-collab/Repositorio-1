@@ -1,7 +1,9 @@
 import nodemailer from 'nodemailer'
 import type { StoredEnquiry } from '../data/enquiries'
 
-const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM, NOTIFY_EMAIL } = process.env
+const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM } = process.env
+// Default destination for enquiry notifications; override with NOTIFY_EMAIL if it changes.
+const NOTIFY_EMAIL = process.env.NOTIFY_EMAIL || 'info@overseasit.net'
 
 const isConfigured = Boolean(SMTP_HOST && SMTP_PORT && SMTP_USER && SMTP_PASS && NOTIFY_EMAIL)
 
@@ -16,8 +18,8 @@ const transporter = isConfigured
 
 if (!isConfigured) {
   console.warn(
-    '[mailer] SMTP not configured (SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/NOTIFY_EMAIL) — ' +
-      'enquiries will be saved but no email notification will be sent. See .env.example.',
+    '[mailer] SMTP not configured (SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS) — enquiries will ' +
+      `be saved but no email notification will be sent to ${NOTIFY_EMAIL}. See .env.example.`,
   )
 }
 

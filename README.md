@@ -54,7 +54,8 @@ Copy `.env.example` to `.env` (or set the same variables in your host's dashboar
 | --- | --- | --- |
 | `PORT` | — | Defaults to 4000 |
 | `ADMIN_KEY` | `GET /api/enquiries` | Leave unset to keep that route closed |
-| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `NOTIFY_EMAIL` | Email notifications on new enquiries | All five must be set or sending is skipped (enquiries are still saved) |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` | Email notifications on new enquiries | All four must be set or sending is skipped (enquiries are still saved) |
+| `NOTIFY_EMAIL` | Email notifications on new enquiries | Optional — defaults to `info@overseasit.net` |
 | `SMTP_FROM` | — | Optional, defaults to `SMTP_USER` |
 
 ### Docker

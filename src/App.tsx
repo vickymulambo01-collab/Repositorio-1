@@ -3,6 +3,7 @@ import { Layout } from '@/components/layout/Layout'
 import About from '@/pages/About'
 import Contact from '@/pages/Contact'
 import Home from '@/pages/Home'
+import NotFound from '@/pages/NotFound'
 import Products from '@/pages/Products'
 import Solutions from '@/pages/Solutions'
 
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   )

@@ -4,12 +4,13 @@ interface SeoProps {
   title: string
   description: string
   path: string
+  noindex?: boolean
 }
 
 const SITE_NAME = 'RIM Trading & Indústria, Lda'
 const SITE_URL = 'https://www.rimtrading.com'
 
-export function Seo({ title, description, path }: SeoProps) {
+export function Seo({ title, description, path, noindex = false }: SeoProps) {
   const fullTitle = `${title} | ${SITE_NAME}`
   const url = `${SITE_URL}${path}`
 
@@ -18,6 +19,7 @@ export function Seo({ title, description, path }: SeoProps) {
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={SITE_NAME} />
