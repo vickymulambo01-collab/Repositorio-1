@@ -44,7 +44,7 @@ export default function Contact() {
             <h3 className="font-display text-base font-bold text-ink">Our Details</h3>
             <address className="mt-3 not-italic">
               <a
-                href="https://maps.app.goo.gl/bNCFGNA3Wn/mX47?g_st=aw"
+                href="https://maps.app.goo.gl/bNCFGNA3Wn7mX4719?g_st=aw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-ink-soft transition-colors hover:text-brand-600"
@@ -61,6 +61,15 @@ export default function Contact() {
                 84 346 6666
               </a>
             </p>
+            <div className="mt-4 overflow-hidden rounded-xl border border-line">
+              <iframe
+                title="RIM Trading & Indústria location"
+                src="https://www.google.com/maps?q=Av.+Eduardo+Mondlane+no+488&output=embed"
+                className="h-56 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
 

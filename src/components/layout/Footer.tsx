@@ -23,7 +23,7 @@ export function Footer() {
           </p>
           <address className="mt-5 not-italic">
             <a
-              href="https://maps.app.goo.gl/bNCFGNA3Wn/mX47?g_st=aw"
+              href="https://maps.app.goo.gl/bNCFGNA3Wn7mX4719?g_st=aw"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-white/70 transition-colors hover:text-white"
