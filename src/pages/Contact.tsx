@@ -53,11 +53,21 @@ export default function Contact() {
               </a>
             </address>
             <p className="mt-2 text-sm text-ink-soft">
-              <a href="tel:+258847776666" className="transition-colors hover:text-brand-600">
+              <a
+                href="https://wa.me/258847776666"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-brand-600"
+              >
                 84 777 6666
               </a>
               <span className="mx-2 text-line">|</span>
-              <a href="tel:+258843466666" className="transition-colors hover:text-brand-600">
+              <a
+                href="https://wa.me/258843466666"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-brand-600"
+              >
                 84 346 6666
               </a>
             </p>

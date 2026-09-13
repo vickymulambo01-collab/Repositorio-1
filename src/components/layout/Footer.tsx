@@ -32,11 +32,21 @@ export function Footer() {
             </a>
           </address>
           <p className="mt-3 text-sm text-white/70">
-            <a href="tel:+258847776666" className="transition-colors hover:text-white">
+            <a
+              href="https://wa.me/258847776666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-white"
+            >
               84 777 6666
             </a>
             <span className="mx-2 text-white/30">|</span>
-            <a href="tel:+258843466666" className="transition-colors hover:text-white">
+            <a
+              href="https://wa.me/258843466666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-white"
+            >
               84 346 6666
             </a>
           </p>
