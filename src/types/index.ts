@@ -13,6 +13,8 @@ export interface Product {
   description: string
   image: string
   featured: boolean
+  /** Unit price in Mozambican Metical (MT). Omitted when not yet priced — show "Price on request". */
+  price?: number
 }
 
 export interface Category {

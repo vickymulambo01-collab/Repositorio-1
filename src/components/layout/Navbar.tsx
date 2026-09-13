@@ -1,5 +1,7 @@
+import { ShoppingCart } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useCart } from '@/context/CartContext'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
@@ -12,6 +14,7 @@ const NAV_LINKS = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { totalItems, openCart } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -60,30 +63,46 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <NavLink to="/contact" className="btn-primary">
-            Get in Touch
-          </NavLink>
-        </div>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={openCart}
+            aria-label="Open your order"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-paper-dim"
+          >
+            <ShoppingCart className="h-5 w-5 text-ink" />
+            {totalItems > 0 && (
+              <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white">
+                {totalItems}
+              </span>
+            )}
+          </button>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-paper-dim md:hidden"
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((v) => !v)}
-        >
-          <span className="sr-only">Menu</span>
-          <div className="flex flex-col gap-1.5">
-            <span
-              className={`h-0.5 w-5 rounded-full bg-ink transition-transform ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
-            />
-            <span className={`h-0.5 w-5 rounded-full bg-ink transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
-            <span
-              className={`h-0.5 w-5 rounded-full bg-ink transition-transform ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
-            />
+          <div className="hidden md:block">
+            <NavLink to="/contact" className="btn-primary">
+              Get in Touch
+            </NavLink>
           </div>
-        </button>
+
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-paper-dim md:hidden"
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            <span className="sr-only">Menu</span>
+            <div className="flex flex-col gap-1.5">
+              <span
+                className={`h-0.5 w-5 rounded-full bg-ink transition-transform ${menuOpen ? 'translate-y-2 rotate-45' : ''}`}
+              />
+              <span className={`h-0.5 w-5 rounded-full bg-ink transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
+              <span
+                className={`h-0.5 w-5 rounded-full bg-ink transition-transform ${menuOpen ? '-translate-y-2 -rotate-45' : ''}`}
+              />
+            </div>
+          </button>
+        </div>
       </div>
 
       <div

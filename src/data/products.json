@@ -11,7 +11,8 @@
     "barcode": "0025882232424",
     "description": "1-ply Nice napkins, 100 sheets per pack, 30 × 30 cm, supplied 8 packs per carton.",
     "image": "/assets/products/nice-guardanapos.jpg",
-    "featured": true
+    "featured": true,
+    "price": 1750
   },
   {
     "id": "fine-guardanapos",
@@ -25,7 +26,8 @@
     "barcode": "0256718985638",
     "description": "1-ply Fine napkins, 100 sheets per pack, 30 × 30 cm, supplied 8 packs per carton.",
     "image": "/assets/products/fine-guardanapos.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1750
   },
   {
     "id": "familiar-gold-guardanapos",
@@ -39,7 +41,8 @@
     "barcode": "8696831205541",
     "description": "1-ply Familiar Gold napkins, 100 sheets per pack, 30 × 30 cm, supplied 8 packs per carton.",
     "image": "/assets/products/familiar-gold-guardanapos.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1750
   },
   {
     "id": "familiar-guardanapos",
@@ -53,7 +56,8 @@
     "barcode": "8696831255584",
     "description": "1-ply Familiar napkins, 200 sheets per pack, 30 × 30 cm, supplied 4 packs per carton.",
     "image": "/assets/products/familiar-guardanapos.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1750
   },
   {
     "id": "fine-eco-guardanapos",
@@ -67,7 +71,8 @@
     "barcode": "0634730745025",
     "description": "1-ply Fine-Eco napkins, 100 sheets per pack, 30 × 30 cm, supplied 8 packs per carton.",
     "image": "/assets/products/fine-eco-guardanapos.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1400
   },
   {
     "id": "nice-classic-50",
@@ -81,7 +86,8 @@
     "barcode": "0634730744998",
     "description": "2-ply Nice Classic napkins, 50 sheets per pack, 33 × 33 cm, supplied 5 packs per carton.",
     "image": "/assets/products/nice-classic-50.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1150
   },
   {
     "id": "nice-classic-100",
@@ -95,7 +101,8 @@
     "barcode": "0634730744981",
     "description": "2-ply Nice Classic napkins, 100 sheets per pack, 33 × 33 cm, supplied 5 packs per carton.",
     "image": "/assets/products/nice-classic-100.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1950
   },
   {
     "id": "snow-guardanapos",
@@ -109,7 +116,8 @@
     "barcode": "8696831205619",
     "description": "2-ply Snow napkins, 100 sheets per pack, 30 × 30 cm, supplied 8 packs per carton.",
     "image": "/assets/products/snow-guardanapos.jpg",
-    "featured": false
+    "featured": false,
+    "price": 2800
   },
   {
     "id": "serviette-takeaway-1ply",
@@ -123,7 +131,8 @@
     "barcode": "0616604685392",
     "description": "1-ply take-away napkins, 2000 sheets per box, 20 × 30 cm, designed for food-service and take-away counters.",
     "image": "/assets/products/serviette-takeaway-1ply.jpg",
-    "featured": true
+    "featured": true,
+    "price": 750
   },
   {
     "id": "serviette-takeaway-2ply",
@@ -137,7 +146,8 @@
     "barcode": "0616604685392",
     "description": "2-ply take-away napkins, 1200 sheets per box, 20 × 30 cm, designed for food-service and take-away counters.",
     "image": "/assets/products/serviette-takeaway-2ply.jpg",
-    "featured": true
+    "featured": true,
+    "price": 750
   },
   {
     "id": "facial-nice-100",
@@ -151,7 +161,8 @@
     "barcode": "0616604685361",
     "description": "2-ply Nice facial tissue, 100 sheets per pack, 20 × 20 cm, supplied 6 packs per carton.",
     "image": "/assets/products/facial-nice-100.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1500
   },
   {
     "id": "facial-nice-150",
@@ -165,7 +176,8 @@
     "barcode": "0634730745001",
     "description": "2-ply Nice facial tissue, 150 sheets per pack, 20 × 20 cm, supplied 6 packs per carton.",
     "image": "/assets/products/facial-nice-150.jpg",
-    "featured": true
+    "featured": true,
+    "price": 1800
   },
   {
     "id": "facial-nice-200",
@@ -179,7 +191,8 @@
     "barcode": "0616604685354",
     "description": "2-ply Nice facial tissue, 200 sheets per pack, 20 × 20 cm, supplied 6 packs per carton.",
     "image": "/assets/products/facial-nice-200.jpg",
-    "featured": false
+    "featured": false,
+    "price": 2100
   },
   {
     "id": "papel-higienico-jumbo",
@@ -192,7 +205,8 @@
     "barcode": "6009803174998",
     "description": "2-ply Jumbo toilet paper, 130 sheets per roll, supplied 10 rolls per pack.",
     "image": "/assets/products/papel-higienico-jumbo.jpg",
-    "featured": false
+    "featured": false,
+    "price": 700
   },
   {
     "id": "papel-higienico-nice-10",
@@ -205,7 +219,8 @@
     "barcode": "0609722934114",
     "description": "2-ply Nice toilet paper, 130 sheets per roll, supplied 10 rolls per pack.",
     "image": "/assets/products/papel-higienico-nice-10.jpg",
-    "featured": false
+    "featured": false,
+    "price": 700
   },
   {
     "id": "papel-higienico-nice-8",
@@ -218,7 +233,8 @@
     "barcode": "0616604685385",
     "description": "2-ply Nice toilet paper, 250 sheets per roll, supplied 8 rolls per pack.",
     "image": "/assets/products/papel-higienico-nice-8.jpg",
-    "featured": true
+    "featured": true,
+    "price": 1150
   },
   {
     "id": "papel-higienico-nice-4",
@@ -231,7 +247,8 @@
     "barcode": "0616604685378",
     "description": "2-ply Nice toilet paper, 300 sheets per roll, supplied 4 rolls per pack.",
     "image": "/assets/products/papel-higienico-nice-4.jpg",
-    "featured": false
+    "featured": false,
+    "price": 950
   },
   {
     "id": "papel-higienico-nice-9",
@@ -244,7 +261,8 @@
     "barcode": "0634730745018",
     "description": "2-ply Nice toilet paper, 300 sheets per roll, supplied 9 rolls per pack.",
     "image": "/assets/products/papel-higienico-nice-9.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1950
   },
   {
     "id": "papel-higienico-familiar-8",
@@ -257,7 +275,8 @@
     "barcode": "8696831205572",
     "description": "1-ply Familiar toilet paper, 180 sheets per roll, supplied 8 rolls per pack.",
     "image": "/assets/products/papel-higienico-familiar-8.jpg",
-    "featured": false
+    "featured": false,
+    "price": 700
   },
   {
     "id": "papel-higienico-familiar-24",
@@ -270,7 +289,8 @@
     "barcode": "8696831205589",
     "description": "1-ply Familiar toilet paper, 180 sheets per roll, supplied 24 rolls per pack.",
     "image": "/assets/products/papel-higienico-familiar-24.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1300
   },
   {
     "id": "papel-higienico-snow-8",
@@ -283,7 +303,8 @@
     "barcode": "8696831205596",
     "description": "2-ply Snow toilet paper, 180 sheets per roll, supplied 8 rolls per pack.",
     "image": "/assets/products/papel-higienico-snow-8.jpg",
-    "featured": false
+    "featured": false,
+    "price": 1050
   },
   {
     "id": "papel-higienico-so-soft",
@@ -309,7 +330,8 @@
     "barcode": "8696831205633",
     "description": "2-ply Nice kitchen towel, 150 sheets per roll, supplied 2 rolls per pack.",
     "image": "/assets/products/toalha-cozinha-nice.jpg",
-    "featured": true
+    "featured": true,
+    "price": 1100
   },
   {
     "id": "papel-a4",
@@ -323,7 +345,8 @@
     "barcode": null,
     "description": "K.One A4 copier paper, 80 GSM, 500 sheets per ream, supplied 5 reams per box.",
     "image": "/assets/products/papel-a4.jpg",
-    "featured": true
+    "featured": true,
+    "price": 1300
   },
   {
     "id": "vassoura-industrial-superpro",
@@ -336,6 +359,7 @@
     "barcode": "7898509280237",
     "description": "SuperPro industrial broom for professional and industrial cleaning use, supplied 12 per box.",
     "image": "/assets/products/vassoura-industrial-superpro.jpg",
-    "featured": false
+    "featured": false,
+    "price": 210
   }
 ]

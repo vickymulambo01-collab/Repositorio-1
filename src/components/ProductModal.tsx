@@ -1,8 +1,10 @@
-import { X } from 'lucide-react'
-import { useEffect } from 'react'
+import { Minus, Plus, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Product } from '@/types'
+import { useCart } from '@/context/CartContext'
 import { getCategoryById } from '@/data/products'
+import { formatPrice } from '@/lib/format'
 
 interface ProductModalProps {
   product: Product | null
@@ -10,6 +12,9 @@ interface ProductModalProps {
 }
 
 export function ProductModal({ product, onClose }: ProductModalProps) {
+  const { addItem } = useCart()
+  const [quantity, setQuantity] = useState(1)
+
   useEffect(() => {
     if (!product) return
     const onKeyDown = (e: KeyboardEvent) => {
@@ -85,9 +90,51 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
               ))}
             </dl>
 
-            <Link to={`/contact?product=${product.id}`} onClick={onClose} className="btn-primary mt-8">
-              Contact Us About This Product
-            </Link>
+            <p className="mt-6 font-display text-xl font-extrabold text-ink">
+              {product.price != null ? formatPrice(product.price) : 'Price on request'}
+            </p>
+
+            {product.price != null ? (
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                <div className="flex items-center rounded-full border border-line">
+                  <button
+                    type="button"
+                    aria-label="Decrease quantity"
+                    onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                    className="flex h-10 w-10 items-center justify-center text-ink-soft hover:text-ink"
+                  >
+                    <Minus className="h-4 w-4" />
+                  </button>
+                  <span className="w-8 text-center text-sm font-semibold text-ink">{quantity}</span>
+                  <button
+                    type="button"
+                    aria-label="Increase quantity"
+                    onClick={() => setQuantity((q) => q + 1)}
+                    className="flex h-10 w-10 items-center justify-center text-ink-soft hover:text-ink"
+                  >
+                    <Plus className="h-4 w-4" />
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    addItem(product.id, quantity)
+                    onClose()
+                  }}
+                  className="btn-primary"
+                >
+                  Add to Order
+                </button>
+              </div>
+            ) : (
+              <Link
+                to={`/contact?product=${product.id}`}
+                onClick={onClose}
+                className="btn-primary mt-4"
+              >
+                Contact Us About This Product
+              </Link>
+            )}
           </div>
         </div>
       </div>

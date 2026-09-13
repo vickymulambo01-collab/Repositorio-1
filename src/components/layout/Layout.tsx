@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { CartDrawer } from '@/components/CartDrawer'
 import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 
@@ -16,6 +17,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      <CartDrawer />
     </div>
   )
 }

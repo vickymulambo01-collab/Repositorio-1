@@ -100,7 +100,11 @@ export default function Products() {
         </div>
       </section>
 
-      <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      <ProductModal
+        key={selectedProduct?.id ?? 'none'}
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
     </>
   )
 }
