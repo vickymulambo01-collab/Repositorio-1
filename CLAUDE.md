@@ -1,7 +1,9 @@
 # Repositorio-1 — RIM Trading & Indústria website
 
 A corporate/B2B website for RIM Trading & Indústria, Lda (paper and hygiene products).
-Not an online store — products link to a contact/enquiry form, not checkout.
+Products show unit prices and let the customer build an order (cart), which checks out
+via a WhatsApp deep link (`src/context/CartContext.tsx`, `src/components/CartDrawer.tsx`)
+rather than a payment gateway — there is still no online payment/checkout flow.
 
 ## Stack
 
@@ -22,7 +24,9 @@ npm run lint          # oxlint
 ## Layout
 
 - `src/pages/` — Home, About, Products, Solutions, Contact (one file per route, wired in `src/App.tsx`)
-- `src/components/` — reusable UI (Navbar, Footer, Hero, ProductCard, ProductGrid, CategoryCard, CTASection, ContactForm, SectionHeader, ProductModal, Seo)
+- `src/components/` — reusable UI (Navbar, Footer, Hero, ProductCard, ProductGrid, CategoryCard, CTASection, ContactForm, SectionHeader, ProductModal, CartDrawer, Seo)
+- `src/context/CartContext.tsx` — cart state (order lines, quantities) shared across the app
+- `src/lib/format.ts` — `formatPrice` (MT currency formatting)
 - `src/data/` — typed product/category data and accessors (`getProductById`, `getProductsByCategory`, etc.)
 - `server/routes/` — `products`, `categories`, `contact`, `enquiries`
 - `public/assets/products/` — product photography sourced from the RIM catalogue PDF
@@ -34,7 +38,9 @@ npm run lint          # oxlint
   be shown. If new source material is provided, update `src/data/*.json` accordingly.
 - Product specs (ply, sheets, dimensions, packaging, barcode) must trace back to the
   catalogue/pricelist — don't add specs that aren't documented there.
-- Prices are intentionally not shown publicly; the site is B2B/enquiry-driven by design.
+- Prices (`price` field, in MT) must trace back to the client's pricelist — never guess a
+  price. A product with no listed price stays without a `price` field and shows "Price on
+  request" instead of an Add-to-order control (see `papel-higienico-so-soft`).
 - `src/data/*.json` is the only place product/category data should be edited — never
   hardcode product info inside components or pages.
 
