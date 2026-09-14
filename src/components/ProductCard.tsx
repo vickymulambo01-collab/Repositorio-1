@@ -1,6 +1,6 @@
 import { Plus } from 'lucide-react'
 import type { Product } from '@/types'
-import { useCart } from '@/context/CartContext'
+import { useCart } from '@/context/useCart'
 import { getCategoryById } from '@/data/products'
 import { formatPrice } from '@/lib/format'
 

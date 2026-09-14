@@ -2,7 +2,7 @@ import { Minus, Plus, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Product } from '@/types'
-import { useCart } from '@/context/CartContext'
+import { useCart } from '@/context/useCart'
 import { getCategoryById } from '@/data/products'
 import { formatPrice } from '@/lib/format'
 

@@ -1,6 +1,6 @@
 import { Minus, Plus, ShoppingCart, Trash2, X } from 'lucide-react'
 import { useState } from 'react'
-import { useCart } from '@/context/CartContext'
+import { useCart } from '@/context/useCart'
 import { getProductById } from '@/data/products'
 import { formatPrice } from '@/lib/format'
 

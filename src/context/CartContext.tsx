@@ -1,42 +1,12 @@
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { getProductById } from '@/data/products'
-
-export interface CartLine {
-  productId: string
-  quantity: number
-}
-
-interface CartContextValue {
-  lines: CartLine[]
-  isOpen: boolean
-  openCart: () => void
-  closeCart: () => void
-  addItem: (productId: string, quantity?: number) => void
-  removeItem: (productId: string) => void
-  setQuantity: (productId: string, quantity: number) => void
-  clear: () => void
-  totalItems: number
-  totalPrice: number
-}
-
-const STORAGE_KEY = 'rim-cart'
-
-const CartContext = createContext<CartContextValue | null>(null)
-
-function readStoredLines(): CartLine[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return []
-    const parsed = JSON.parse(raw)
-    if (!Array.isArray(parsed)) return []
-    return parsed.filter(
-      (l): l is CartLine =>
-        l && typeof l.productId === 'string' && typeof l.quantity === 'number' && l.quantity > 0,
-    )
-  } catch {
-    return []
-  }
-}
+import {
+  CartContext,
+  readStoredLines,
+  STORAGE_KEY,
+  type CartContextValue,
+  type CartLine,
+} from './cart-store'
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<CartLine[]>(() => readStoredLines())
@@ -104,10 +74,4 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>
-}
-
-export function useCart(): CartContextValue {
-  const ctx = useContext(CartContext)
-  if (!ctx) throw new Error('useCart must be used within a CartProvider')
-  return ctx
 }

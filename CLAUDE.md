@@ -17,7 +17,8 @@ rather than a payment gateway — there is still no online payment/checkout flow
 ```bash
 npm install
 npm run dev:all      # frontend (5173) + API (4000) together, with the /api proxy wired up
-npm run build         # tsc -b && vite build
+npm run build         # tsc -b && vite build (frontend only — server isn't typechecked by this)
+npm run typecheck:server  # tsc -p server/tsconfig.json --noEmit
 npm run lint          # oxlint
 ```
 
@@ -25,7 +26,8 @@ npm run lint          # oxlint
 
 - `src/pages/` — Home, About, Products, Solutions, Contact (one file per route, wired in `src/App.tsx`)
 - `src/components/` — reusable UI (Navbar, Footer, Hero, ProductCard, ProductGrid, CategoryCard, CTASection, ContactForm, SectionHeader, ProductModal, CartDrawer, Seo)
-- `src/context/CartContext.tsx` — cart state (order lines, quantities) shared across the app
+- `src/context/` — cart state shared across the app: `cart-store.ts` (context/types/
+  localStorage), `CartContext.tsx` (`CartProvider`), `useCart.ts` (the hook)
 - `src/lib/format.ts` — `formatPrice` (MT currency formatting)
 - `src/data/` — typed product/category data and accessors (`getProductById`, `getProductsByCategory`, etc.)
 - `server/routes/` — `products`, `categories`, `contact`, `enquiries`
